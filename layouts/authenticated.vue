@@ -1,30 +1,30 @@
 <template>
     <div class="min-h-screen bg-gray-100 flex flex-col">
         <!-- Header -->
-        <header class="bg-blue-800 text-white p-4 shadow-md">
+        <header class="text-white p-4 shadow-md bg-primary">
             <nav class="container mx-auto flex justify-between items-center">
-                <h1 class="text-xl font-bold">我的應用</h1>
+                <h1 class="text-xl font-bold">My Application</h1>
                 <div class="space-x-4">
-                    <NuxtLink to="/dashboard" class="hover:underline">儀表板</NuxtLink>
-                    <NuxtLink to="/profile" class="hover:underline">個人資料</NuxtLink>
-                    <button @click="logout" class="hover:underline">登出</button>
+                    <NuxtLink to="/dashboard" class="hover:underline">Dashboard</NuxtLink>
+                    <NuxtLink to="/profile" class="hover:underline">Profile</NuxtLink>
+                    <button @click="logout" class="hover:underline">Logout</button>
                 </div>
             </nav>
         </header>
 
-        <!-- 頁面內容 -->
+        <!-- Page Content -->
         <main class="container mx-auto py-8 flex-grow">
             <slot />
         </main>
 
         <!-- Footer -->
-        <footer class="bg-blue-800 text-white p-4">
+        <footer class="text-white p-4 bg-primary">
             <div class="container mx-auto text-center">
-                <p>&copy; 2025 我的應用。保留所有權利。</p>
+                <p>© 2025 My Application. All rights reserved.</p>
                 <div class="mt-2 space-x-4">
-                    <a href="#" class="hover:underline">關於我們</a>
-                    <a href="#" class="hover:underline">聯繫我們</a>
-                    <a href="#" class="hover:underline">隱私政策</a>
+                    <a href="#" class="hover:underline">About Us</a>
+                    <a href="#" class="hover:underline">Contact Us</a>
+                    <a href="#" class="hover:underline">Privacy Policy</a>
                 </div>
             </div>
         </footer>
@@ -33,9 +33,9 @@
 
 <script lang="ts" setup>
 const logout = () => {
-    // 模擬登出邏輯，未來可連接到真實的登出 API
-    console.log('用戶登出');
-    // 例如：導向到首頁
+    // Simulate logout logic, can be connected to a real logout API in the future
+    console.log('User logged out');
+    // For example: Redirect to home page
     navigateTo('/');
 };
 </script>

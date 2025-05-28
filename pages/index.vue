@@ -5,7 +5,7 @@
             Join us and explore more exciting content! Sign up or log in now to start your journey.
         </p>
         <div class="flex space-x-4">
-            <NuxtLink to="/register" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition btn-primary">
+            <NuxtLink to="/register" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition btn-bg-primary">
                 Sign up
             </NuxtLink>
             <NuxtLink to="/login" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition">

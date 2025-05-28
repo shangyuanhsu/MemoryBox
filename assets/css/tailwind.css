@@ -4,10 +4,17 @@
 
 :root {
     --primary-color: #317647;
-    --secondary-color: #4b5563;
-    --background-color: #f3f4f6;
 }
 
-.btn-primary {
+.btn-bg-primary {
     background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.color-primary {
+    color: var(--primary-color);
 }

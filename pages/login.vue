@@ -1,27 +1,27 @@
 <template>
     <div class="min-h-screen bg-gray-100 flex items-center justify-center">
         <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">登入</h1>
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Login</h1>
             <form @submit.prevent="handleSubmit">
                 <div class="mb-4">
-                    <label for="username" class="block text-gray-700 font-medium mb-2">用戶名</label>
+                    <label for="username" class="block text-gray-700 font-medium mb-2">Username</label>
                     <input id="username" v-model="form.username" type="text"
                         class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                        placeholder="輸入用戶名" required />
+                        placeholder="Enter username" required />
                 </div>
                 <div class="mb-6">
-                    <label for="password" class="block text-gray-700 font-medium mb-2">密碼</label>
+                    <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
                     <input id="password" v-model="form.password" type="password"
                         class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                        placeholder="輸入密碼" required />
+                        placeholder="Enter password" required />
                 </div>
                 <button type="submit"
-                    class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
-                    登入
+                    class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition btn-bg-primary">
+                    Login
                 </button>
             </form>
             <p class="mt-4 text-center text-gray-600">
-                還沒有帳號？<NuxtLink to="/register" class="text-blue-600 hover:underline">立即註冊</NuxtLink>
+                Don't have an account? <NuxtLink to="/register" class="text-blue-600 hover:underline color-primary">Register now</NuxtLink>
             </p>
         </div>
     </div>
@@ -30,7 +30,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-// 定義表單資料的型別
+// Define form data type
 interface LoginForm {
     username: string;
     password: string;
@@ -42,11 +42,11 @@ const form = ref<LoginForm>({
 });
 
 const handleSubmit = () => {
-    // 模擬登入邏輯
-    console.log('登入表單提交:', form.value);
-    // 未來可在此處呼叫 API，例如：
+    // Simulate login logic
+    console.log('Login form submitted:', form.value);
+    // Future API call can be added here, e.g.:
     // await $fetch('/api/login', { method: 'POST', body: form.value });
-    // 模擬成功登入後導向儀表板
+    // Simulate redirect to dashboard after successful login
     navigateTo('/dashboard');
 };
 </script>
